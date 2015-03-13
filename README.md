@@ -95,6 +95,46 @@
 
   4) Starting at the 2nd item, continue from Step 1. (Then 3rd item, etc.)
 
-  <a href = "https://www.youtube.com/watch?v=MtcrEhrt_K0">
-![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/tree/master/images/lego.jpg)
+  <a href = "https://www.youtube.com/watch?v=MtcrEhrt_K0">Lego Bubble Sort
   </a>
+
+  Bubble sort has the same complexity as Selection Sort, so we don't gain
+  in efficiency.
+
+```python
+def bubbleSort(alist):
+  for passnum in range(len(alist)-1,0,-1):
+    for num in range(passnum):
+      if alist[num]>alist[num+1]:
+        temp = alist[num]
+        alist[num] = alist[num+1]
+        alist[num+1] = temp
+
+```
+
+##Merge Sort
+
+ Merge Sort is the first algorithm we'll look at that demonstrates a real efficiency.
+
+ The complexity of merge sort is O(n log n).
+
+ This means that if you had 32 items:
+
+    -log (base 2) 32 = 5
+    -so 5 * 32 = 156 or 0.156 seconds in the worst case scenario.
+    -performing a bubble sort on 32 items would take 1 second (or 7 times longer).
+
+
+ Merge sort is a more complicated, here are the steps:
+
+  1) If the list has more than 1 element, split it half.
+
+  2) Loop back to Step 1.
+
+  3) Otherwise compare two lists and merge them.
+
+    -Put the smaller item first in the new merged list.
+
+  4) Loop back to 3.
+
+![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/tree/master/images/merge_sort_recursion.png)
