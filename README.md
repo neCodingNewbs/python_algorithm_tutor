@@ -130,9 +130,9 @@ def bubbleSort(alist):
 
  Performing a bubble sort on 32 items would take **1 second** (or 7 times longer).
 
- Or, a 10000 item list would take almost *28 hours to sort using bubble sort.*
+ Or, a 10000 item list would take almost **28 hours to sort using bubble sort.**
 
- The same 10000 item list would only take *2.25 minutes* to sort using merge sort.
+ The same 10000 item list would only take **2.25 minutes** to sort using merge sort.
 
  Merge sort is a little more complicated, here are the steps:
 
