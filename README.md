@@ -33,8 +33,8 @@
   3)Find the third-smallest card. Swap it with the third card.
   4)Repeat finding the next-smallest card, and swapping it into the correct
     position until the array is sorted.
- Inline-style: 
+
 ![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
 
-    [Selection Sort]: https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG
+   
    
