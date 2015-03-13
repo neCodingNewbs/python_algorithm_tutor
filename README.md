@@ -16,8 +16,9 @@
 ##Algorithm Tutorial
 
   We'll look at algorithms to perform 2 of most common processes when dealing with
-  data: *searching* and *sorting*.
+  data:
 
+  **searching** and **sorting**.
 
 
 
@@ -25,10 +26,10 @@
 
   Sorting often needs to be done before searching.
 
-  Imagine you are creating a phonebook (see Wikipedia t0 learn what that is ;):
+  Imagine you are creating a phonebook (see Wikipedia to learn what that is ;):
 
   You have 10,000 people to put in the book and you want to organize them by name.
-  By organising the names(in this case alphabetically), finding a specific
+  By first organising the names(in this case alphabetically), finding a specific
   name later will be much easier.
 
   We'll look at 3 different sorting algorithms and compare their efficiency.
@@ -42,13 +43,13 @@
 ##Selection Sort
 (http://en.wikipedia.org/wiki/Selection_sort)
 
-  1) Find the smallest card. Swap it with the first card.
+  1) Find the smallest item. Swap it with the first item.
 
-  2) Find the second-smallest card. Swap it with the second card.
+  2) Find the second-smallest item. Swap it with the second item.
 
-  3) Find the third-smallest card. Swap it with the third card.
+  3) Find the third-smallest item. Swap it with the third item.
 
-  4) Repeat finding the next-smallest card, and swapping it into the correct
+  4) Repeat, finding the next-smallest item, and swapping it into the correct
      position until the array is sorted.
 
 ![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
@@ -74,19 +75,18 @@
         if aList[number] < aList[least]:
           least = number
 
-          swap(aList, least, n)
+      swap(aList, least, n)
 
 
   def swap(array, x, y):
     temp = array[x]
     array[x] = array[y]
     array[y] = temp
-
 ```
 
 ##Bubble Sort
 
-  The aim is to sort from lowest to highest.
+  The aim again, is to sort from lowest to highest.
 
   1) Compare the first 2 items, if they are out of order, swap them.
 
@@ -95,6 +95,8 @@
   3) Continue until you reach the end of the list.
 
   4) Starting at the 2nd item, continue from Step 1. (Then 3rd item, etc.)
+
+###Here's a video demonstrating bubble sort.
 
   <a href = "https://www.youtube.com/watch?v=MtcrEhrt_K0">Lego Bubble Sort
   </a>
@@ -115,7 +117,8 @@ def bubbleSort(alist):
 
 ##Merge Sort
 
- Merge Sort is the first algorithm we'll look at that demonstrates a real efficiency.
+ Merge Sort is the first algorithm we'll look at that demonstrates a real gain
+ in efficiency.
 
  The complexity of merge sort is O(n log n).
 
@@ -127,8 +130,11 @@ def bubbleSort(alist):
 
  Performing a bubble sort on 32 items would take **1 second** (or 7 times longer).
 
+ Or, a 10000 item list would take almost *28 hours to sort using bubble sort.*
 
- Merge sort is a more complicated, here are the steps:
+ The same 10000 item list would only take *2.25 minutes* to sort using merge sort.
+
+ Merge sort is a little more complicated, here are the steps:
 
   1) If the list has more than 1 element, split it half.
 
@@ -136,9 +142,9 @@ def bubbleSort(alist):
 
   3) Otherwise compare two lists and merge them.
 
-    -Put the smaller item first in the new merged list.
+  4) Put the smaller item first in the new merged list.
 
-  4) Loop back to 3.
+  5) Loop back to 3.
 
 ![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/merge_sort_recursion.png)
 
@@ -184,8 +190,8 @@ def mergeSort(alist):
   Computers hold data, a *lot* of data. We need efficient ways to find a particular
   piece of information before the universe dies a heat death.
 
-  We'll look compare 2 search algorithms, one that increases linearly in complexity
-  O(n) and a second that increases by O(log n).
+  We'll  compare 2 search algorithms, one that increases linearly in complexity
+  O(n), and a second that increases by O(log n).
 
 ##Linear Search
 
@@ -250,3 +256,7 @@ def binarySearch(alist, item):
 
   return found
 ```
+
+One thing to notice about these search algorithms is that they require the lists
+to be sorted first. So if you have a huge jumble of data, first you need to sort it.
+However, once sorted, searches can be performed repeatedly and quickly.
