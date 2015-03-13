@@ -95,6 +95,6 @@
 
   4) Starting at the 2nd item, continue from Step 1. (Then 3rd item, etc.)
 
-  <a href = "https://www.youtube.com/watch?v=MtcrEhrt_K0"> Lego Bubble Sort<img
-  src = "https://github.com/theloniusmonkey/python_algorithm_tutor/tree/master/images/lego.jpg"/>
+  <a href = "https://www.youtube.com/watch?v=MtcrEhrt_K0">
+  ![alt text] (https://github.com/theloniusmonkey/python_algorithm_tutor/tree/master/images/lego.jpg)
   </a>
