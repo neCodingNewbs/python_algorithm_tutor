@@ -56,9 +56,9 @@
   increases by *n squared*.
 
 
-  ###Python code
+###Python code
 
-  '''python
+'''python
   def selection_sort(aList):
     for n in range(len(aList)):
       least = n
@@ -74,4 +74,4 @@
     array[x] = array[y]
     array[y] = temp
 
-    '''
+'''
