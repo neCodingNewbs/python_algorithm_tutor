@@ -35,4 +35,4 @@
     position until the array is sorted.
 
     ![Selection Sort](/images/selection.jpg)
-    Format: ![Alt Text](url)
+    Format: ![Alt Text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
