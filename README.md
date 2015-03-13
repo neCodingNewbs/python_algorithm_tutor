@@ -36,7 +36,5 @@
  Inline-style: 
 ![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
 
-Reference-style: 
-![alt text][Selection Sort]
     [Selection Sort]: https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG
    
