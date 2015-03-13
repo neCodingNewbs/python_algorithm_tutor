@@ -35,3 +35,4 @@
     position until the array is sorted.
 
     ![Selection Sort](/images/selection.png)
+    Format: ![Alt Text](url)
