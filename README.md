@@ -22,6 +22,7 @@
 
 
 #Sorting
+
   Sorting often needs to be done before searching.
 
   Imagine you are creating a phonebook (see Wikipedia t0 learn what that is ;):
@@ -122,9 +123,9 @@ def bubbleSort(alist):
 
  log (base 2) 32 = 5
 
- So 5 * 32 = 156 or 0.156 seconds in the worst case scenario.
+ So 5 * 32 = 156 or **0.156 seconds** in the worst case scenario.
 
- Performing a bubble sort on 32 items would take 1 second (or 7 times longer).
+ Performing a bubble sort on 32 items would take **1 second** (or 7 times longer).
 
 
  Merge sort is a more complicated, here are the steps:
@@ -140,3 +141,112 @@ def bubbleSort(alist):
   4) Loop back to 3.
 
 ![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/merge_sort_recursion.png)
+
+```python
+def mergeSort(alist):
+  print("Splitting ",alist)
+  if len(alist)>1:
+    mid = len(alist)//2
+    lefthalf = alist[:mid]
+    righthalf = alist[mid:]
+
+    mergeSort(lefthalf)
+    mergeSort(righthalf)
+
+    i=0
+    j=0
+    k=0
+    while i<len(lefthalf) and j<len(righthalf):
+      if lefthalf[i]<righthalf[j]:
+        alist[k]=lefthalf[i]
+        i=i+1
+      else:
+        alist[k]=righthalf[j]
+        j=j+1
+        k=k+1
+
+    while i<len(lefthalf):
+      alist[k]=lefthalf[i]
+      i=i+1
+      k=k+1
+
+    while j<len(righthalf):
+      alist[k]=righthalf[j]
+      j=j+1
+      k=k+1
+    print("Merging ",alist)
+```
+#Searching
+
+  Searching is really the name of the game- we're mainly interested in sorting,
+  so that our searching goes better.
+
+  Computers hold data, a *lot* of data. We need efficient ways to find a particular
+  piece of information before the universe dies a heat death.
+
+  We'll look compare 2 search algorithms, one that increases linearly in complexity
+  O(n) and a second that increases by O(log n).
+
+##Linear Search
+
+  There isn't much to this one. You go through the list, one item at a time until
+  you find the item you're looking for. In the worst case scenario, your item is
+  at the end of the list.
+
+```python
+def linearSearch(item, alist):
+  position = 0
+  found = False
+  while position < len(alist) and not found:
+    if alist[position] == item:
+      found = True
+    position = position + 1
+  return found
+```
+This code returns 'True'  or 'False' if the item is in the list.
+
+
+##Binary Search
+
+ Binary search is a huge improvement over linear search. It's complexity is of
+ the order O(log n).
+
+ In the worst case, a 1,000,000 item list might take *15 minutes* to search using
+ linear search.
+
+ Using binary search, the same list would only take *0.02 seconds* to search.
+
+ The pseudocode look like this:
+
+ 1) Let min = 0 and max = n-1.
+
+ 2) Compute guess as the average of max and min, rounded down (so that it is an integer).
+
+ 3) If array[guess] equals target, then stop. You found it! Return guess.
+
+ 4) If the guess was too low, that is, array[guess] < target, then set min = guess + 1.
+
+ 5) Otherwise, the guess was too high. Set max = guess - 1.
+
+ 6) Go back to step 2.
+
+![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/binary.jpg)
+
+```python
+def binarySearch(alist, item):
+  first = 0
+  last = len(alist)-1
+  found = False
+
+  while first<=last and not found:
+    midpoint = (first + last)//2
+    if alist[midpoint] == item:
+      found = True
+    else:
+      if item < alist[midpoint]:
+        last = midpoint-1
+      else:
+        first = midpoint+1
+
+  return found
+```
