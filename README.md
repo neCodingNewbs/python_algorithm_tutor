@@ -34,5 +34,5 @@
   4)Repeat finding the next-smallest card, and swapping it into the correct
     position until the array is sorted.
 
-    ![Selection Sort](/images/selection.jpg)
+    ![Selection Sort](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
     Format: ![Alt Text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/selection.JPG)
