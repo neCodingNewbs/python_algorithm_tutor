@@ -120,9 +120,11 @@ def bubbleSort(alist):
 
  This means that if you had 32 items:
 
-    -log (base 2) 32 = 5
-    -so 5 * 32 = 156 or 0.156 seconds in the worst case scenario.
-    -performing a bubble sort on 32 items would take 1 second (or 7 times longer).
+ log (base 2) 32 = 5
+
+ So 5 * 32 = 156 or 0.156 seconds in the worst case scenario.
+
+ Performing a bubble sort on 32 items would take 1 second (or 7 times longer).
 
 
  Merge sort is a more complicated, here are the steps:
@@ -137,4 +139,4 @@ def bubbleSort(alist):
 
   4) Loop back to 3.
 
-![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/tree/master/images/merge_sort_recursion.png)
+![alt text](https://github.com/theloniusmonkey/python_algorithm_tutor/blob/master/images/merge_sort_recursion.png)
