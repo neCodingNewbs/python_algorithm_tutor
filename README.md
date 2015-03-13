@@ -222,7 +222,7 @@ This code returns 'True'  or 'False' if the item is in the list.
 
  Using binary search, the same list would only take *0.02 seconds* to search.
 
- The pseudocode look like this:
+ The pseudocode looks like this:
 
  1) Let min = 0 and max = n-1.
 
