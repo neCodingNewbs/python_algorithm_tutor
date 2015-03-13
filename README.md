@@ -34,5 +34,5 @@
   4)Repeat finding the next-smallest card, and swapping it into the correct
     position until the array is sorted.
 
-    ![Selection Sort](/images/selection.png)
+    ![Selection Sort](/images/selection.jpg)
     Format: ![Alt Text](url)
